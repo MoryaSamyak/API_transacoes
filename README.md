@@ -84,9 +84,13 @@ Esta rota deve retornar estatísticas das transações que aconteceram nos últi
 }
 
 **count:** Quantidade de transações nos últimos 60 segundos 
+
 **sum:** Soma total do valor transacionado nos últimos 60 segundos 
+
 **avg:** Média do valor transacionado nos últimos 60 segundos
+
 **min:** Menor valor transacionado nos últimos 60 segundos 
+
 **max:** Maior valor transacionado nos últimos 60 segundos 
 
 Como resposta, espera-se que responda com: 
