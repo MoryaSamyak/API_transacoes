@@ -11,13 +11,19 @@ Esta é a rota que irá receber as Transações. Cada transação consiste de um
 **Segue um exemplo:**
 
 {
+ 
   "id": "4544e22a-37ee-49d5-814a-988bce4d3f92",
+  
   "valor": 200,
+  
   "dataHora": "2025-06-05 20:41:00"
+  
 }
 
 **id**: String única que representa o id da transação. Deve seguir o padrão de UUID. 
+
 **valor**: Valor em decimal com ponto flutuante da transação. 
+
 **dataHora**: Data/Hora no padrão ISO 8601 em que a transação aconteceu.
 
 
@@ -33,10 +39,15 @@ A API só aceitará transações que:
 Como resposta, espera-se que responda com: 
 
 ● **201 Created** sem nenhum corpo 
+
   ○ A transação foi aceita (ou seja foi validada, está válida e foi registrada) 
+  
 ● **422 Unprocessable Entity** sem nenhum corpo 
+
   ○ A transação não foi aceita por qualquer motivo (1 ou mais dos critérios de aceite não foram atendidos - por exemplo: uma transação com valor menor que 0) 
+  
 ● **400 Bad Request** sem nenhum corpo 
+
   ○ A API não compreendeu a requisição do cliente (por exemplo: um JSON 
   inválido) 
 
